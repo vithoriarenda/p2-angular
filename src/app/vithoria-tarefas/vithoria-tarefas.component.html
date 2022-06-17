@@ -1,0 +1,16 @@
+<h2>[Vithória Arenda]TasksComponent</h2>
+<div>
+  <h3>Lista de tarefas</h3>
+  <table>
+    <tr *ngFor="let item of lista; index as i">
+      <td>{{ item }}</td>
+      <td><button (click)="deletarItem(i)">Deletar</button></td>
+    </tr>
+  </table>
+</div>
+
+<div>
+  <h3>Adicionar tarefas</h3>
+  <input type="text" value="Nome da tarefa" [(ngModel)]="tarefa" />
+  <button (click)="criarItem()">Adicionar</button>
+</div>
